@@ -23,8 +23,10 @@ void CH2_X_Scale(){
 // set new buffer size when change x scale
 void set_x_scale_ch2(){
   buffer_ch2 = int((scale_x_ch2 / send_time)) * max_colum;
-  myChart2.setData("ch2", new float[buffer_ch2]);
-  x2.setText(scale_x_ch2+" sec");
+  x2.setText((scale_x_ch2*1000)+" ms");
+  if((mode_ch == 2) || (mode_ch == 3)){
+    myChart2.setData("ch2", new float[buffer_ch2]);
+  }
 }
 
 // update y scale

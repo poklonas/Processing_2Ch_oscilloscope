@@ -89,7 +89,7 @@ void setup() {
                     
   // show scale x for ch1
   x1 = cp5.addTextlabel("x1")
-                    .setText(scale_x_ch1+" Sec")
+                    .setText((scale_x_ch1*1000)+" ms")
                     .setPosition(x_app+185, y_app+660)
                     .setColorValue(0xffffff00)
                     .setFont(createFont("Arial",20))
@@ -97,7 +97,7 @@ void setup() {
                     
   // show scale x for ch2                    
   x2 = cp5.addTextlabel("x2")
-                    .setText(scale_x_ch2+" Sec")
+                    .setText((scale_x_ch2*1000)+" ms")
                     .setPosition(x_app+865, y_app+660)
                     .setColorValue(0xffffff00)
                     .setFont(createFont("Arial",20))

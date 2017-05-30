@@ -23,8 +23,10 @@ void CH1_X_Scale(){
 // set new buffer size when change x scale
 void set_x_scale_ch1(){
   buffer_ch1 = int((scale_x_ch1 / send_time)) * max_colum;
-  myChart.setData("ch1", new float[buffer_ch1]);
-  x1.setText(scale_x_ch1+" sec");
+  x1.setText((scale_x_ch1*1000)+" ms");
+  if((mode_ch == 1) || (mode_ch == 3)){
+    myChart.setData("ch1", new float[buffer_ch1]);
+  }
 }
 
 
